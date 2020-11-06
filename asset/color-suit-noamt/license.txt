@@ -1,0 +1,11 @@
+Model Information:
+* title:	Color-suit-noamt
+* source:	https://sketchfab.com/3d-models/color-suit-noamt-1f534834f1094ed8b15d5befca5f671c
+* author:	Mingxuan Xie (https://sketchfab.com/vrchitecture)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Color-suit-noamt" (https://sketchfab.com/3d-models/color-suit-noamt-1f534834f1094ed8b15d5befca5f671c) by Mingxuan Xie (https://sketchfab.com/vrchitecture) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

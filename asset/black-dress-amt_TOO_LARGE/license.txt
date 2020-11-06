@@ -1,0 +1,11 @@
+Model Information:
+* title:	black-dress-amt
+* source:	https://sketchfab.com/3d-models/black-dress-amt-71caa8eeb5bd4d6fa7c13aa61b3ad898
+* author:	Mingxuan Xie (https://sketchfab.com/vrchitecture)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "black-dress-amt" (https://sketchfab.com/3d-models/black-dress-amt-71caa8eeb5bd4d6fa7c13aa61b3ad898) by Mingxuan Xie (https://sketchfab.com/vrchitecture) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

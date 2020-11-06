@@ -1,0 +1,11 @@
+Model Information:
+* title:	white-rabbit-amt
+* source:	https://sketchfab.com/3d-models/white-rabbit-amt-26475f5e13e5499dbb1558d040183cc0
+* author:	Mingxuan Xie (https://sketchfab.com/vrchitecture)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "white-rabbit-amt" (https://sketchfab.com/3d-models/white-rabbit-amt-26475f5e13e5499dbb1558d040183cc0) by Mingxuan Xie (https://sketchfab.com/vrchitecture) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

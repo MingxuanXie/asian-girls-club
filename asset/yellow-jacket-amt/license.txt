@@ -1,0 +1,11 @@
+Model Information:
+* title:	Yellow-jacket-amt
+* source:	https://sketchfab.com/3d-models/yellow-jacket-amt-c90ce196ee7a40a3af8ca6b549478d13
+* author:	Mingxuan Xie (https://sketchfab.com/vrchitecture)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Yellow-jacket-amt" (https://sketchfab.com/3d-models/yellow-jacket-amt-c90ce196ee7a40a3af8ca6b549478d13) by Mingxuan Xie (https://sketchfab.com/vrchitecture) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

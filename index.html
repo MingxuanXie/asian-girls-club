@@ -1,0 +1,68 @@
+<!-- Created by Mingxuan Xie (https://mingxuan.fun/) using Aframe.io -->
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Asian Girls Club</title>
+    <script src="js/aframe-v1.0.4.min.js"></script>
+    <script src="js/hyper-move.js"></script>
+    <!-- <script src="js/twoway-motion.js"></script> -->
+    <script src="js/aframe-extras.min.js"></script>
+    <!-- <script src="js/aframe-look-at-component.min.js"></script> -->
+    <!-- <script src="js/aframe-particle-system-component.min.js"></script> POOL PERFORMANCE ON PHONES -->
+    <!-- <script src="js/click-url.js"></script> -->
+    <script src="https://morandd.github.io/aframe-multitouch-look-controls/multitouch-look-controls.js"></script>
+  </head>
+
+  <body>
+
+    <a-scene vr-mode-ui="enabled: false" 
+    renderer="antialias: true; colorManagement: true;" 
+    device-orientation-permission-ui="enabled: false"
+    wasd-control> 
+    <!-- <a-scene vr-mode-ui="enabled: false" wasd-control fog="type: exponential; color: #ff0088; density: 0.005">  -->
+
+      <a-assets>
+        <!-- <img id="Menu" src="asset/menu.png"> -->
+        <a-asset-item id="VirtualStore" src="asset/agc-store.gltf"></a-asset-item>
+        <a-asset-item id="color-suit" src="asset/color-suit-noamt/scene.gltf"></a-asset-item>
+        <a-asset-item id="orange-jacket" src="asset/orange-jacket-amt/scene.gltf"></a-asset-item>
+        <a-asset-item id="white-rabbit" src="asset/white-rabbit-amt/scene.gltf"></a-asset-item>
+        <a-asset-item id="yellow-jacket" src="asset/yellow-jacket-amt/scene.gltf"></a-asset-item>
+      </a-assets>
+
+<!-- Utilities -->
+      <a-sky color="pink"></a-sky>
+
+      <!-- twoway-motion="nonMobileLoad: true; speed: 60; threshold: -90" -->
+      <a-camera
+        multitouch-look-controls 
+        animation__start="property: position; from: 0 20 30; to: 0 1.6 0; dur: 2000;" 
+        position="0 1.6 0" far="1000" fov="90">
+        <!-- <a-image src="#Menu" width="0.35" height="0.35" position="0 0.025 -0.5" animation="property: position; to: 0 0 1; startEvents: mousedown; dur: 100"></a-image> -->
+      </a-camera>
+      <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
+
+<!-- Lights -->
+      <!-- <a-entity light="type: ambient; color: #ffffff; intensity: 2"></a-entity> -->
+
+<!-- Links -->
+      <a-link href="https://mingxuan.fun/" title="Mingxuan Xie" image="#Mingxuan" position="0 1.5 50"></a-link>
+
+<!-- Images -->
+      <!-- <a-image id="redCross" src="#RedCross" width="0.5" height="0.5" hypermove position="2 2 2"></a-image> -->
+  
+<!-- Models -->
+      <a-gltf-model src="#VirtualStore" position="0 0 -6"></a-gltf-model>
+      <a-gltf-model src="#color-suit" position="-1 0 -2.5" rotation=""
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear"></a-gltf-model>
+      <a-gltf-model src="#orange-jacket" position="1.92649 0 -7.33623" rotation="" animation-mixer></a-gltf-model>
+      <a-gltf-model src="#white-rabbit" position="-2.34764 0 -8.94236" rotation="" animation-mixer></a-gltf-model>
+      <a-gltf-model src="#yellow-jacket" position="-0.18192 0 -9.37022" rotation="" animation-mixer></a-gltf-model>
+
+    </a-scene>
+
+  </body>
+
+</html>
