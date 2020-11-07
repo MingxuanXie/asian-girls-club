@@ -1,6 +1,6 @@
 // usage: 
 // <a-camera two-way="speed: 50; threshold: -20"></a-camera>
-// 
+// Modified by mingxuan.fun
 AFRAME.registerComponent('twoway-motion', {
     schema: {
         speed: { type: "number", default: 40 },
@@ -65,6 +65,11 @@ AFRAME.registerComponent('twoway-motion', {
 
         var canvas = document.querySelector(".a-canvas");
 
+        // Added by mingxuan.fun
+        canvas.addEventListener("mousemove", function (e) {
+            twowaymotion.touching = false;
+        });
+
         canvas.addEventListener("mousedown", function (e) {
             report("mousedown", e);
             twowaymotion.touching = true;
@@ -72,6 +77,11 @@ AFRAME.registerComponent('twoway-motion', {
         });
         canvas.addEventListener("mouseup", function (e) {
             report("mouseup", e);
+            twowaymotion.touching = false;
+        });
+
+        // Added by mingxuan.fun
+        canvas.addEventListener("touchmove", function (e) {
             twowaymotion.touching = false;
         });
 

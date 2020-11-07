@@ -7,19 +7,19 @@
     <title>Asian Girls Club</title>
     <script src="js/aframe-v1.0.4.min.js"></script>
     <script src="js/hyper-move.js"></script>
-    <!-- <script src="js/twoway-motion.js"></script> -->
     <script src="js/aframe-extras.min.js"></script>
     <!-- <script src="js/aframe-look-at-component.min.js"></script> -->
     <!-- <script src="js/aframe-particle-system-component.min.js"></script> POOL PERFORMANCE ON PHONES -->
     <!-- <script src="js/click-url.js"></script> -->
     <script src="js/multitouch-look-controls.js"></script>
+    <script src="js/twoway-motion.js"></script>
   </head>
 
   <body>
 
     <a-scene vr-mode-ui="enabled: false" 
     renderer="antialias: true; colorManagement: true;" 
-    device-orientation-permission-ui="enabled: false"
+    device-orientation-permission-ui="enabled: ture"
     wasd-control> 
     <!-- <a-scene vr-mode-ui="enabled: false" wasd-control fog="type: exponential; color: #ff0088; density: 0.005">  -->
 
@@ -35,9 +35,9 @@
 <!-- Utilities -->
       <a-sky color="pink"></a-sky>
 
-      <!-- twoway-motion="nonMobileLoad: true; speed: 60; threshold: -90" -->
+      <!-- twoway-motion="nonMobileLoad: true; speed: 60; threshold: -90"         multitouch-look-controls="xrange: 20; yrange: -1 1; zrange: 20"  -->
       <a-camera
-        multitouch-look-controls="xrange: 20; yrange: -2 2; zrange: 10" 
+        twoway-motion="nonMobileLoad: true; speed: 50; threshold: -90"
         animation__start="property: position; from: 0 20 30; to: 0 1.6 0; dur: 2000;" 
         position="0 1.6 0" far="1000" fov="90">
         <!-- <a-image src="#Menu" width="0.35" height="0.35" position="0 0.025 -0.5" animation="property: position; to: 0 0 1; startEvents: mousedown; dur: 100"></a-image> -->
