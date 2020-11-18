@@ -1,0 +1,28 @@
+.a-loader-title {
+    visibility: hidden;
+    }
+.a-dialog{
+    /* background-color: rgba(118, 255, 97, 0.75);
+    backdrop-filter: blur(7px); */
+    background-color: rgba(255, 20, 147, 0.8);
+    backdrop-filter: blur(8px);
+    }
+.a-dialog-text{
+    font: PingFangSC-Bold, 'Ubuntu Mono', monospace;
+    color: #eaff00;
+    }
+.a-dialog-allow-button {
+    font: PingFangSC-Bold, 'Ubuntu Mono', monospace;
+    color: deeppink;
+    background-color: yellow;
+    }
+.a-dialog-deny-button {
+    font: PingFangSC-Bold, 'Ubuntu Mono', monospace;
+    color: white;
+    background-color: pink;
+    }
+.a-dialog-ok-button {
+    font: PingFangSC-Bold, 'Ubuntu Mono', monospace;
+    color: deeppink;
+    background-color: yellow;
+    }
