@@ -11,7 +11,7 @@
     <!-- <script src="js/aframe-look-at-component.min.js"></script> -->
     <!-- <script src="js/aframe-particle-system-component.min.js"></script> POOL PERFORMANCE ON PHONES -->
     <!-- <script src="js/click-url.js"></script> -->
-    <script src="js/multitouch-look-controls.js"></script>
+    <!-- <script src="js/multitouch-look-controls.js"></script> -->
     <script src="js/twoway-motion.js"></script>
   </head>
 
@@ -20,8 +20,9 @@
     <a-scene vr-mode-ui="enabled: false" 
     renderer="antialias: true; colorManagement: true;" 
     device-orientation-permission-ui="enabled: ture"
-    fog="type: linear; color: #e8b6ff; near: 5; far: 20"
+    fog="type: linear; color: #d761ff; near: 5; far: 30"
     wasd-control
+    stats
     > 
     <!-- 
       <a-scene vr-mode-ui="enabled: false" 
@@ -32,7 +33,6 @@
     -->
       
       <a-assets>
-        <a-mixin id="cloth" geometry="primitive: plane" material="alphaTest: 0.5; shader: standard; side: double"></a-mixin>
         <img id="image1" src="asset/img/1.png">
         <img id="image2" src="asset/img/2.png">
         <img id="image3" src="asset/img/3.png">
@@ -40,52 +40,63 @@
         <img id="image5" src="asset/img/5.png">
         <img id="image6" src="asset/img/6.png">
         <img id="image7" src="asset/img/7.png">
-        <a-asset-item id="VirtualStore" src="asset/agc-store.gltf"></a-asset-item>
+        <img id="image8" src="asset/img/graffiti1.png">
+        <img id="image9" src="asset/img/graffiti2.png">
+        <a-asset-item id="VirtualStore" src="asset/agc-store/agc-store.gltf"></a-asset-item>
         <a-asset-item id="color-suit" src="asset/color-suit-noamt/scene.gltf"></a-asset-item>
         <a-asset-item id="orange-jacket" src="asset/orange-jacket-amt/scene.gltf"></a-asset-item>
         <a-asset-item id="white-rabbit" src="asset/white-rabbit-amt/scene.gltf"></a-asset-item>
         <a-asset-item id="yellow-jacket" src="asset/yellow-jacket-amt/scene.gltf"></a-asset-item>
+        <a-mixin id="cloth" geometry="primitive: plane" material="alphaTest: 0.5; shader: standard; side: double"></a-mixin>
+        <a-mixin id="verticalmove" animation="property: rotation; to: 0 180 0; dur: 2500; loop: true; dir: alternate; easing: linear"></a-mixin>
       </a-assets>
 
       <!-- Utilities -->
-      <a-sky color="pink"></a-sky>
-      <!-- twoway-motion="nonMobileLoad: true; speed: 60; threshold: -90"         multitouch-look-controls="xrange: 20; yrange: -1 1; zrange: 20"  -->
+      <a-sky material="fog: false" animation="property: color; from: #d761ff; to: #ccccff; dur: 10000; dir: alternate; loop: true; easing: linear"></a-sky>
+      <a-entity id="ocean" ocean="density: 10; width: 250; depth: 250; speed: 5" material="side: single; color: #66ffff; opacity: 0.75; metalness: 0; roughness: 1" rotation="-90 0 0" position="0, -0.175, 0"></a-entity>
+      <!-- twoway-motion="nonMobileLoad: true; speed: 60; threshold: -90"  multitouch-look-controls="xrange: 20; yrange: -1 1; zrange: 20"  -->
       <a-camera
         twoway-motion="nonMobileLoad: true; speed: 50; threshold: -90"
-        animation__start="property: position; from: 0 20 30; to: 0 1.6 0; dur: 2000;" 
+        animation__start="property: position; from: 0 20 15; to: 0 1.6 0; dur: 2000;" 
         position="0 1.6 0" far="1000" fov="100">
         <!-- <a-image src="#Menu" width="0.35" height="0.35" position="0 0.025 -0.5" animation="property: position; to: 0 0 1; startEvents: mousedown; dur: 100"></a-image> -->
+        <a-entity light="type: point; color: #fff; intensity: 1" position="0 0 0"></a-entity>
       </a-camera>
       <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
 
       <!-- Lights -->
-      <a-entity light="type: ambient; color: #666"></a-entity>
-      <a-entity light="type: directional; color: red; intensity: 1;" position="-0.5 1 1"></a-entity>
-      <a-entity light="type: directional; color: blue; intensity: 1" position="1 1 1"></a-entity>
+      <a-entity light="type: ambient; color: #d761ff; intensity: 1"></a-entity>
+      <!-- <a-entity light="type: directional; color: green; intensity: 1;" position="-0.5 1 1"></a-entity> -->
+      <a-entity light="type: directional; color: lightblue; intensity: 0.5" position="1 1 1"></a-entity>
       <!-- "castShadow:true;" not working -->
 
       <!-- Links -->
       <!-- <a-link href="https://mingxuan.fun/" title="Mingxuan Xie" image="#Mingxuan" position="0 1.5 50"></a-link> -->
 
       <!-- Images -->
-      <a-entity id="cloth1" mixin="cloth" material="src: #image1" position="-0.52512 1.14626 -7.67437"></a-entity>
-      <a-entity id="cloth2" mixin="cloth" material="src: #image2" position="-0.32813 1.67718 -9.04797"></a-entity>
-      <a-entity id="cloth3" mixin="cloth" material="src: #image3" position="-2.87524 0.95533 -6.24641"></a-entity>
-      <a-entity id="cloth4" mixin="cloth" material="src: #image4" position="1.21485 1.42917 -7.25576"></a-entity>
+      <a-entity id="cloth1" mixin="cloth verticalmove" material="src: #image1" position="-0.52512 1.14626 -7.67437"></a-entity>
+      <a-entity id="cloth2" mixin="cloth verticalmove" material="src: #image2" position="-0.32813 1.67718 -9.04797"></a-entity>
+      <a-entity id="cloth3" mixin="cloth verticalmove" material="src: #image3" position="-2.80214 2.50125 -8.64591" rotation="0 85 0"></a-entity>
+      <a-entity id="cloth4" mixin="cloth verticalmove" material="src: #image4" position="1.21485 1.42917 -7.25576"></a-entity>
       <a-entity id="cloth5" mixin="cloth" material="src: #image5" position="1.50543 1.17692 -10.02893"></a-entity>
       <a-entity id="cloth6" mixin="cloth" material="src: #image6" position="1.90868 1.29259 -8.75483"></a-entity>
       <a-entity id="cloth7" mixin="cloth" material="src: #image7" position="0.65465 1.11468 -9.46877"></a-entity>
-
-
+      <a-entity id="graffiti" mixin="cloth" material="src: #image8" position="1.95823 0.85227 -5.74252" scale="1.9 1.6 1.9"></a-entity>
+      <a-entity id="graffiti" mixin="cloth" material="src: #image9" position="-1.99757 1.18955 -5.76023" scale="1.97763 1.66538 1.52698" rotation="-180 0 -180"></a-entity>
       <!-- Models -->
-      <a-gltf-model src="#VirtualStore" position="0 0 -5.5"></a-gltf-model>
-      <a-gltf-model src="#color-suit" position="-1 0 -2.5" rotation=""
-        animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear"></a-gltf-model>
-      <a-gltf-model src="#orange-jacket" position="1.92649 0 -7.33623" rotation="" animation-mixer></a-gltf-model>
-      <a-gltf-model src="#white-rabbit" position="-2.34764 0 -8.94236" rotation="" animation-mixer></a-gltf-model>
-      <a-gltf-model src="#yellow-jacket" position="-1.88284 0.74932 -15.57155" scale="5 5 5" rotation="" animation-mixer></a-gltf-model>
-
-    </a-scene>
+      <a-gltf-model src="#VirtualStore" position="0 0 -5.75"></a-gltf-model>
+      <a-gltf-model src="#color-suit" position="-0.75 0 -1.75" scale="1.2 1.2 1.2" rotation=""
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear">
+      </a-gltf-model>
+      <a-circle color="blue" position="-0.75 0.01 -1.75" rotation="-90 0 0" radius="0.3"></a-circle>
+      <a-gltf-model src="#orange-jacket" position="1.92649 0 -6.68622" rotation="" animation-mixer></a-gltf-model>
+      <a-gltf-model src="#white-rabbit" position="-1.86143 3.25 -9.3269" rotation="" animation-mixer></a-gltf-model>
+      <a-gltf-model src="#yellow-jacket" position="2 0.74932 -15.57155" scale="5 5 5" rotation="0 -90 0" animation-mixer
+        animation__position="property: position; from: 2 0.74932 -15.57155; to: -11.00817 0.74932 -15.57155; autoplay: true; dur: 6000; easing: linear"
+        animation__rotation="property: rotation; from: 0 -90 0; to: 0 90 0; dur: 200; easing: linear; dir: alternate; startEvents: animationcomplete__position, animationcomplete__positionloop;"
+        animation__positionloop="property: position; from: -11.00817 0.74932 -15.57155; to: 2 0.74932 -15.57155; autoplay: true; dur: 6000; easing: linear; dir: alternate; startEvents: animationcomplete__rotation;"
+      ></a-gltf-model>
+    </a-scene> 
 
   </body>
 
