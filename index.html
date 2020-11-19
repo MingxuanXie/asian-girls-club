@@ -65,7 +65,6 @@
         twoway-motion="nonMobileLoad: true; speed: 50; threshold: -90"
         animation__start="property: position; from: 0 20 15; to: 0 1.6 0; dur: 1000;" 
         position="0 1.6 0" far="1000" fov="100">
-        <!-- <a-image src="#Menu" width="0.35" height="0.35" position="0 0.025 -0.5" animation="property: position; to: 0 0 1; startEvents: mousedown; dur: 100"></a-image> -->
         <a-entity light="type: point; color: #fff; intensity: 1.25" position="0 0 -0.25"></a-entity>
         <a-entity cursor="fuse: true; fuseTimeout: 500"
                   raycaster="far: 3; interval: 500"
@@ -85,17 +84,11 @@
         <a-entity id="info9" mixin="info-text" text="value: RTVG Camo Jacket and Pants"></a-entity>
         <a-entity id="info10" mixin="info-text" text="value: Starry Uff White Knitted Crop Top with Rabbit Details"></a-entity>
         <a-entity id="info11" mixin="info-text" text="value: RTVG Unisex Silk Jacket with Dragon Embroidery"></a-entity>
-
       </a-camera>
-      <!-- <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity> -->
+      <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
 
       <!-- Lights -->
       <a-entity light="type: ambient; color: #22bbbb"></a-entity>
-      <!-- <a-entity light="type: directional; color: green; intensity: 1;" position="-0.5 1 1"></a-entity> -->
-      <!-- <a-entity light="type: directional; color: lightblue; intensity: 0.5" position="1 1 1"></a-entity> -->
-
-      <!-- Links -->
-      <!-- <a-link href="https://mingxuan.fun/" title="Mingxuan Xie" image="#Mingxuan" position="0 1.5 50"></a-link> -->
 
       <!-- Images -->
       <a-entity id="cloth1" mixin="cloth verticalmove" material="src: #image1" show-info="#info1" position="1.06331 1.75 -10.3594"></a-entity>
@@ -124,7 +117,5 @@
         animation__positionloop="property: position; from: -11.00817 0.74932 -15.57155; to: 2 0.74932 -15.57155; autoplay: true; dur: 6000; easing: linear; dir: alternate; startEvents: animationcomplete__rotation;"
       ></a-gltf-model>
     </a-scene> 
-
   </body>
-
 </html>
