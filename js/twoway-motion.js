@@ -66,9 +66,9 @@ AFRAME.registerComponent('twoway-motion', {
         var canvas = document.querySelector(".a-canvas");
 
         // Added by mingxuan.fun
-        canvas.addEventListener("mousemove", function (e) {
-            twowaymotion.touching = false;
-        });
+        // canvas.addEventListener("mousemove", function (e) {
+        //     twowaymotion.touching = false;
+        // });
 
         canvas.addEventListener("mousedown", function (e) {
             report("mousedown", e);
@@ -81,9 +81,9 @@ AFRAME.registerComponent('twoway-motion', {
         });
 
         // Added by mingxuan.fun
-        canvas.addEventListener("touchmove", function (e) {
-            twowaymotion.touching = false;
-        });
+        // canvas.addEventListener("touchmove", function (e) {
+        //     twowaymotion.touching = false;
+        // });
 
         canvas.addEventListener("touchstart", function (e) {
             this.touch = e;
